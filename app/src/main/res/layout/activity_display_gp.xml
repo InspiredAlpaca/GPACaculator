@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                               xmlns:tools="http://schemas.android.com/tools"
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               tools:context="com.example.herman.capcaculator.UI.displayGPA" tools:layout_editor_absoluteY="81dp"
+                               tools:layout_editor_absoluteX="0dp">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="146dp"
+            tools:layout_editor_absoluteX="143dp" android:id="@+id/displayGPA" android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" android:layout_marginEnd="136dp" android:layout_marginTop="195dp"/>
+</android.widget.RelativeLayout>
+
