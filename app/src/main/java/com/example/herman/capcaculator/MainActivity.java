@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         logicManager = new Logic(this,modelManger);
         UiManger uiManger = new UiManger(logicManager);
     }
-    //add a comment
+    //Added another comment
+    //Test comment to push onto git
     public Model initializeModelManger(){
         StudentInformation initialData ;
         initialData = new StudentInformation();
