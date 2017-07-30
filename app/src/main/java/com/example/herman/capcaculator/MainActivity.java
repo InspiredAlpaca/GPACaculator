@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         logicManager = new Logic(this,modelManger);
         UiManger uiManger = new UiManger(logicManager);
     }
-    
+    //add a comment
     public Model initializeModelManger(){
         StudentInformation initialData ;
         initialData = new StudentInformation();
