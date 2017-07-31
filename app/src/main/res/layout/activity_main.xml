@@ -1,39 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+                               android:id="@+id/fragmentParentViewGroup"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.example.herman.capcaculator.MainActivity" tools:layout_editor_absoluteY="81dp"
         tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-            android:text="Enter current GPA:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/EnterMods"
-            android:layout_below="@+id/numMods" android:layout_alignParentStart="true"
-            android:layout_marginTop="21dp"/>
-    <TextView
-            android:text="Enter number of mods:"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/textView3"
-            android:layout_marginTop="26dp" android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"/>
-    <EditText
-            android:text="enter here"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/currGPA"
-            android:layout_marginTop="27dp"
-            android:layout_below="@+id/EnterMods" android:layout_alignParentStart="true"/>
-    <EditText
-            android:text="enter here"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/numMods"
-            android:layout_marginTop="27dp"
-            android:layout_below="@+id/textView3" android:layout_alignParentStart="true"/>
-    <Button
-            android:text="submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/submit"
-            android:layout_below="@+id/currGPA" android:layout_alignParentStart="true" android:layout_marginTop="55dp"/>
+    <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:name="com.example.herman.capcaculator.UI.FragmmentInputsDisplay"
+            android:id="@+id/fragment3"
+            tools:layout="@layout/fragment_inputs_display"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+    <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:name="com.example.herman.capcaculator.UI.FragmmentDisplayCAP"
+            android:id="@+id/fragment4"
+            tools:layout="@layout/fragment_display_ca"
+
+            android:layout_marginBottom="65dp" android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" android:layout_marginStart="114dp"/>
 </android.widget.RelativeLayout>

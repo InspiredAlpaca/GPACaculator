@@ -14,4 +14,5 @@ public class Model {
     public void updateNumOfMods(int numOfMods){
         currentProgramInstance.updateNumOfMods(numOfMods);
     }
+    
 }

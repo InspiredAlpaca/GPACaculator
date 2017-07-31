@@ -1,17 +1,13 @@
 package com.example.herman.capcaculator.logic;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.text.Editable;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import com.example.herman.capcaculator.R;
 import com.example.herman.capcaculator.UI.UiManger;
-import com.example.herman.capcaculator.UI.displayGPA;
 import com.example.herman.capcaculator.model.Model;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -30,6 +26,7 @@ public class Logic {
     public Logic(final Activity activity, final Model modelManager){
         this.activity = activity;
         this.modelManager = modelManager;
+        /*
         submit = (Button)activity.findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +38,7 @@ public class Logic {
                 uiManger.switchActivityToDisplayGPA(activity, numOfMods);
 
             }
-        });
+        });*/
     }
     
     public Editable getNumMod(){
