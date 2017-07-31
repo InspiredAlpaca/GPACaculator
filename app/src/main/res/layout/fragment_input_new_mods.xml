@@ -1,0 +1,86 @@
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="com.example.herman.capcaculator.UI.inputNewMods">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+            android:text="Module 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:id="@+id/textView11"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_below="@+id/spinner1" android:layout_alignStart="@+id/textView7"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner3"
+            android:entries="@array/grades"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/spinner2" android:layout_alignParentEnd="true" android:layout_marginEnd="12dp"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner4"
+            android:entries="@array/grades"
+            android:layout_alignTop="@+id/textView14" android:layout_alignStart="@+id/spinner3"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner5"
+            android:entries="@array/grades"
+            android:layout_alignTop="@+id/textView5" android:layout_alignStart="@+id/spinner4"/>
+    <TextView
+            android:text="Module 5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/textView14" android:layout_alignStart="@+id/textView14"/>
+    <TextView
+            android:text="Module 4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_below="@+id/textView13" android:layout_alignStart="@+id/textView13"
+            android:layout_marginTop="23dp"/>
+    <TextView
+            android:text="Module 3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_alignBottom="@+id/spinner3" android:layout_alignStart="@+id/textView11"/>
+    <TextView
+            android:text="Module 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp" android:layout_marginTop="14dp"
+            android:id="@+id/textView7"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1"
+            android:entries="@array/grades"
+            android:layout_alignTop="@+id/textView7" android:layout_alignStart="@+id/spinner2"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:entries="@array/grades"
+            android:layout_alignTop="@+id/textView11" android:layout_alignStart="@+id/spinner3"/>
+    <Button
+            android:text="Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submitNewMods"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/spinner5" android:layout_alignParentEnd="true"/>
+</android.widget.RelativeLayout>
