@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                               xmlns:tools="http://schemas.android.com/tools"
+                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               tools:context="com.example.herman.capcaculator.MainActivity"
+                               tools:layout_editor_absoluteY="81dp"
+                               tools:layout_editor_absoluteX="0dp" android:id="@+id/fragment1">
+
+    <TextView
+            android:text="Enter current GPA:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/EnterMods"
+            android:layout_marginTop="29dp" android:layout_below="@+id/currNumMods"
+            android:layout_alignStart="@+id/textView3"/>
+    <TextView
+            android:text="Enter number of mods:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView3"
+            android:layout_marginTop="18dp"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/currGPA"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:layout_alignBaseline="@+id/EnterMods" android:layout_alignBottom="@+id/EnterMods"
+            android:layout_alignStart="@+id/currNumMods"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/currNumMods"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:layout_alignBaseline="@+id/textView3" android:layout_alignBottom="@+id/textView3"
+            android:layout_alignParentEnd="true"/>
+    <Button
+            android:text="submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/submit"
+            android:layout_marginTop="14dp" android:layout_below="@+id/currNumSU"
+            android:layout_alignParentStart="true"/>
+    <TextView
+            android:text="Enter number of SU:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/currGPA" android:layout_alignStart="@+id/EnterMods"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName|number"
+            android:ems="10"
+            android:background="@drawable/border"
+            android:id="@+id/currNumSU"
+            android:text="0"
+            android:layout_alignBaseline="@+id/textView4" android:layout_alignBottom="@+id/textView4"
+            android:layout_alignParentEnd="true" android:textAlignment="center"/>
+</android.widget.RelativeLayout>

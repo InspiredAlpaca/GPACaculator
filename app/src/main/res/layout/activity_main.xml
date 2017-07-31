@@ -8,19 +8,20 @@
         tools:context="com.example.herman.capcaculator.MainActivity" tools:layout_editor_absoluteY="81dp"
         tools:layout_editor_absoluteX="0dp">
 
-    <fragment
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:name="com.example.herman.capcaculator.UI.FragmmentInputsDisplay"
-            android:id="@+id/fragment3"
-            tools:layout="@layout/fragment_inputs_display"
-            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
-    <fragment
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:name="com.example.herman.capcaculator.UI.FragmmentDisplayCAP"
-            android:id="@+id/fragment4"
-            tools:layout="@layout/fragment_display_ca"
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/StudentInputInfo"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_alignParentTop="true" android:layout_alignParentStart="true">
 
-            android:layout_marginBottom="65dp" android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" android:layout_marginStart="114dp"/>
+    </FrameLayout>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/inputNewMods" android:layout_marginTop="300dp">
+
+    </FrameLayout>
 </android.widget.RelativeLayout>
