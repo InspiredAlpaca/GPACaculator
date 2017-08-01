@@ -8,9 +8,10 @@ import com.example.herman.capcaculator.UI.*;
 import com.example.herman.capcaculator.logic.Logic;
 import com.example.herman.capcaculator.model.Model;
 import com.example.herman.capcaculator.model.StudentInformation;
-import java.text.DecimalFormat;
 
-public class MainActivity extends AppCompatActivity implements getInputsListener,FragmentDisplayCAP.displayGPA, inputNewMods.GetSpinnerInputsListener {
+public class MainActivity extends AppCompatActivity implements FragmentInputsDisplay.getStudentInformationListener,
+            FragmentDisplayCAP.displayGPA, FragmentInputsDisplay.GetSpinnerInputsListener, FragmentInputsDisplay.GetGradeCreditInputsListener
+            ,FragmentInputsDisplay.UpdateForecastCAP {
     protected Logic logicManager;
     protected Model modelManger;
     FragmentManager fragmentManager;
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements getInputsListener
         fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.StudentInputInfo, new FragmentInputsDisplay(), "inputDisplay");
-        fragmentTransaction.add(R.id.inputNewMods, new inputNewMods());
         fragmentTransaction.commit();
     }
     
@@ -35,28 +35,43 @@ public class MainActivity extends AppCompatActivity implements getInputsListener
     }
     
     @Override
-    public void getInput(String currGPA, String numOfMods, String numOfSUs) {
+    public void onStudentInformationListener(String currGPA, String creditsEarned, String numOfMods, String numOfSUs) {
+        if(!creditsEarned.equals("")) {
+            modelManger.updateCreditEarned(Integer.parseInt(creditsEarned));
+        }
+        if(!currGPA.equals("")) {
+            modelManger.updateCurrGPA(Double.parseDouble(currGPA));
+
+        }
         modelManger.updateNumOfMods(Integer.parseInt(numOfMods));
-        modelManger.updateCurrGPA(Double.parseDouble(currGPA));
         modelManger.updateNumOfSUs(Integer.parseInt(numOfSUs));
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.StudentInputInfo, new FragmentDisplayCAP());
-        fragmentTransaction.addToBackStack(null); //By calling addToBackStack(), the replace transaction is saved
-        // to the back stack so the user can reverse the transaction and bring back the previous fragment by pressing the Back button
-        fragmentTransaction.commit();
+
     }
     
     @Override
-    public void getSpinnerListener(String mod1,String mod2,String mod3,String mod4,String mod5) {
+    public void onSpinnerListener(String mod1, String mod2, String mod3, String mod4, String mod5) {
         modelManger.setNewMods(mod1,mod2,mod3,mod4,mod5);
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.StudentInputInfo, new FragmentDisplayCAP());
-        fragmentTransaction.addToBackStack(null); //By calling addToBackStack(), the replace transaction is saved
+        //fragmentTransaction.replace(R.id.StudentInputInfo, new FragmentDisplayCAP());
+
+        //fragmentTransaction.addToBackStack(null); //By calling addToBackStack(), the replace transaction is saved
         // to the back stack so the user can reverse the transaction and bring back the previous fragment by pressing the Back button
-        fragmentTransaction.commit();
+        //fragmentTransaction.commit();
     }
     @Override
     public double updateCAP() {
+        double computedCAP = logicManager.computeCombinedForecast();
+        return computedCAP;
+    }
+    
+    @Override
+    public void onGradeCreditistener(String mod1, String mod2, String mod3, String mod4, String mod5) {
+        modelManger.setGradeCredits(mod1,mod2,mod3,mod4,mod5);
+        
+    }
+    
+    @Override
+    public double getForecastCAP() {
         double computedCAP = logicManager.computeCombinedForecast();
         return computedCAP;
     }

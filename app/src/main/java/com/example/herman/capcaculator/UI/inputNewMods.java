@@ -30,7 +30,7 @@ public class inputNewMods extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        getSpinnerInputsListener = (GetSpinnerInputsListener) context;
+        //getSpinnerInputsListener = (GetSpinnerInputsListener) context;
         
     }
     

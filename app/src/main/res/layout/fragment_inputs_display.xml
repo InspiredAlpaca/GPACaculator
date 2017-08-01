@@ -9,44 +9,83 @@
                                tools:layout_editor_absoluteX="0dp" android:id="@+id/fragment1">
 
     <TextView
-            android:text="Enter current GPA:"
+            android:text="Current CAP:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/EnterMods"
-            android:layout_marginTop="29dp" android:layout_below="@+id/currNumMods"
-            android:layout_alignStart="@+id/textView3"/>
+            android:layout_marginTop="19dp"
+            android:layout_alignParentTop="true" android:layout_alignEnd="@+id/creditEarned"/>
     <TextView
-            android:text="Enter number of mods:"
+            android:text="Number of mods:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView3"
-            android:layout_marginTop="18dp"
-            android:layout_alignParentTop="true" android:layout_alignParentStart="true"/>
+            android:layout_marginTop="29dp"
+            android:layout_below="@+id/creditEarned" android:layout_alignStart="@+id/textView4"/>
     <EditText
             android:layout_width="70dp"
             android:layout_height="wrap_content" android:id="@+id/currGPA"
             android:inputType="phone"
             android:background="@drawable/border"
-            android:layout_alignBaseline="@+id/EnterMods" android:layout_alignBottom="@+id/EnterMods"
-            android:layout_alignStart="@+id/currNumMods"/>
+            android:textAlignment="center"
+            android:layout_alignTop="@+id/EnterMods" android:layout_alignStart="@+id/textView4"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/creditEarned"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:layout_marginStart="14dp"
+            android:textAlignment="center" android:layout_alignTop="@+id/textView4"
+            android:layout_toEndOf="@+id/textView2"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/modCredit1"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:textAlignment="center"
+            android:layout_alignBottom="@+id/spinner1" android:layout_toStartOf="@+id/currNumMods" android:text="4"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/modCredit5"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:textAlignment="center"
+            android:layout_alignBaseline="@+id/textView5" android:layout_alignBottom="@+id/textView5"
+            android:layout_alignStart="@+id/modCredit4" android:text="4"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/modCredit4"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:textAlignment="center"
+            android:layout_alignBottom="@+id/spinner4" android:layout_alignStart="@+id/modCredit3" android:text="4"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/modCredit3"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:textAlignment="center"
+            android:layout_alignBottom="@+id/spinner3" android:layout_alignStart="@+id/modCredit2" android:text="4"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/modCredit2"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:textAlignment="center"
+            android:layout_above="@+id/spinner3" android:layout_alignStart="@+id/modCredit1" android:text="4"/>
     <EditText
             android:layout_width="70dp"
             android:layout_height="wrap_content" android:id="@+id/currNumMods"
             android:inputType="phone"
             android:background="@drawable/border"
-            android:layout_alignBaseline="@+id/textView3" android:layout_alignBottom="@+id/textView3"
-            android:layout_alignParentEnd="true"/>
-    <Button
-            android:text="submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/submit"
-            android:layout_marginTop="14dp" android:layout_below="@+id/currNumSU"
-            android:layout_alignParentStart="true"/>
+            android:text="0"
+            android:textAlignment="center" android:layout_alignBottom="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3"/>
     <TextView
-            android:text="Enter number of SU:"
+            android:text="Number of SU:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
-            android:layout_marginTop="33dp"
-            android:layout_below="@+id/currGPA" android:layout_alignStart="@+id/EnterMods"/>
+            android:layout_marginTop="41dp"
+            android:layout_below="@+id/currGPA" android:layout_toEndOf="@+id/spinner3"/>
     <EditText
             android:layout_width="70dp"
             android:layout_height="wrap_content"
@@ -55,6 +94,128 @@
             android:background="@drawable/border"
             android:id="@+id/currNumSU"
             android:text="0"
-            android:layout_alignBaseline="@+id/textView4" android:layout_alignBottom="@+id/textView4"
-            android:layout_alignParentEnd="true" android:textAlignment="center"/>
+            android:textAlignment="center" android:layout_above="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3"/>
+
+
+    <TextView
+            android:text="Module 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:id="@+id/textView11"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_below="@+id/spinner1" android:layout_alignStart="@+id/textView7"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner3"
+            android:entries="@array/grades"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/spinner2" android:layout_alignStart="@+id/spinner2"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner4"
+            android:entries="@array/grades"
+            android:layout_alignTop="@+id/textView14" android:layout_alignStart="@+id/spinner3"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner5"
+            android:entries="@array/grades"
+            android:layout_alignTop="@+id/textView5" android:layout_alignStart="@+id/spinner4"/>
+    <TextView
+            android:text="Module 5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_below="@+id/spinner4" android:layout_alignStart="@+id/textView14"
+            android:layout_marginTop="12dp"/>
+    <TextView
+            android:text="Module 4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_marginTop="15dp" android:layout_below="@+id/spinner3"
+            android:layout_alignStart="@+id/textView13"/>
+    <TextView
+            android:text="Module 3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_alignTop="@+id/spinner3" android:layout_alignStart="@+id/textView11"/>
+    <TextView
+            android:text="Module 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" android:textSize="17sp"
+            android:layout_marginTop="108dp"
+            android:layout_below="@+id/textView3" android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1"
+            android:entries="@array/grades"
+            android:layout_alignTop="@+id/textView7" android:layout_alignStart="@+id/creditEarned"
+            android:layout_marginStart="29dp"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:entries="@array/grades"
+            android:layout_alignTop="@+id/textView11" android:layout_alignStart="@+id/spinner1"/>
+    <Button
+            android:text="Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submitNewMods"
+            android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
+    <TextView
+            android:text="Credits Earned:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/creditEarned" android:layout_alignParentStart="true"/>
+    <TextView
+            android:text="Modules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textAlignment="center"
+            android:layout_alignBaseline="@+id/textView8" android:layout_alignBottom="@+id/textView8"
+            android:layout_alignParentStart="true" android:layout_alignEnd="@+id/textView7"/>
+    <TextView
+            android:text="Grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:textAlignment="center" android:layout_alignBaseline="@+id/textView6"
+            android:layout_alignBottom="@+id/textView6" android:layout_alignStart="@+id/spinner1"
+            android:layout_alignEnd="@+id/spinner1"/>
+    <TextView
+            android:text="Credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_above="@+id/spinner1"
+            android:layout_marginBottom="10dp" android:id="@+id/textView6"
+            android:layout_alignStart="@+id/modCredit1" android:layout_alignEnd="@+id/modCredit1"
+            android:textAlignment="center"/>
+    <TextView
+            android:text="Forecasted CAP:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9" android:layout_above="@+id/textView" android:layout_alignEnd="@+id/creditEarned"
+            android:layout_marginEnd="26dp" android:layout_marginBottom="29dp"/>
+    <TextView
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forecastedCap" android:layout_alignBaseline="@+id/textView9"
+            android:layout_alignBottom="@+id/textView9" android:layout_alignEnd="@+id/textView8"
+            android:textColor="@android:color/holo_red_dark" android:textSize="24sp"/>
 </android.widget.RelativeLayout>

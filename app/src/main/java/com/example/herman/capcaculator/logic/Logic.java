@@ -9,10 +9,6 @@ import com.example.herman.capcaculator.model.Model;
 
 import java.util.logging.Logger;
 
-/**
- * Created by Herman on 29/7/2017.
- */
-
 public class Logic {
     private final Logger logger = Logger.getLogger(Logic.class.getName());
     private final Model modelManager;
@@ -22,11 +18,26 @@ public class Logic {
         this.activity = activity;
         this.modelManager = modelManager;
     }
+    
+    /**
+     *
+     * @return
+     */
     public double computeCombinedForecast(){
+        int creditsEarned = modelManager.getCreditsEarned();
+        //assume it is 4 credit first
+        int forecastModsCredit = modelManager.getForecastMods();
+        double initialGradePoints = creditsEarned * modelManager.getCurrGPA();
+        double forecastGradePoints = modelManager.getTotalGPA();
+        double finalGradePoints =  initialGradePoints + forecastGradePoints;
+        int finalModsCredit = forecastModsCredit + creditsEarned;
+        double finalCAP = finalGradePoints/finalModsCredit;
+
+        
         int currNumOfMods = modelManager.getNumOfMods() - modelManager.getNumOfSU();
         double currOverallGPA = modelManager.getCurrGPA()* currNumOfMods;
         int totalForecastMods = currNumOfMods + modelManager.getForecastMods();
         double overallGPA = currOverallGPA + modelManager.getTotalGPA();
-        return overallGPA/totalForecastMods;
+        return finalCAP;
     }
 }
