@@ -1,7 +1,6 @@
-package com.example.herman.capcaculator.UI;
+package com.namreh.capcaculator.UI;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.example.herman.capcaculator.UI;
+package com.namreh.capcaculator.UI;
 
 import android.content.Context;
 import android.os.Bundle;

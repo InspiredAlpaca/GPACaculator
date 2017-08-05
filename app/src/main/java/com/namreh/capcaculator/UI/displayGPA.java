@@ -1,10 +1,9 @@
-package com.example.herman.capcaculator.UI;
+package com.namreh.capcaculator.UI;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import com.example.herman.capcaculator.R;
-import com.example.herman.capcaculator.logic.Logic;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

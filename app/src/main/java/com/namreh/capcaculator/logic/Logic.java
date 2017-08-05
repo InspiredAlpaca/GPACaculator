@@ -1,11 +1,7 @@
-package com.example.herman.capcaculator.logic;
+package com.namreh.capcaculator.logic;
 
 import android.app.Activity;
-import android.text.Editable;
-import android.widget.Button;
-import android.widget.EditText;
-import com.example.herman.capcaculator.R;
-import com.example.herman.capcaculator.model.Model;
+import com.namreh.capcaculator.model.Model;
 
 import java.util.logging.Logger;
 
@@ -24,8 +20,13 @@ public class Logic {
      * @return
      */
     public double computeCombinedForecast(){
-        int creditsEarned = modelManager.getCreditsEarned();
-        //assume it is 4 credit first
+        int creditsEarned;
+        if(modelManager.getNumOfMods() != 0){
+            int validMods = modelManager.getNumOfMods() - modelManager.getNumOfSU();
+            creditsEarned = validMods * 4;
+        } else {
+            creditsEarned = modelManager.getCreditsEarned();
+        }
         int forecastModsCredit = modelManager.getForecastMods();
         double initialGradePoints = creditsEarned * modelManager.getCurrGPA();
         double forecastGradePoints = modelManager.getTotalGPA();

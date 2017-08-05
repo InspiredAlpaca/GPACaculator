@@ -1,16 +1,18 @@
-package com.example.herman.capcaculator;
+package com.namreh.capcaculator;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.herman.capcaculator.UI.*;
-import com.example.herman.capcaculator.logic.Logic;
-import com.example.herman.capcaculator.model.Model;
-import com.example.herman.capcaculator.model.StudentInformation;
+import com.example.herman.capcaculator.R;
+import com.namreh.capcaculator.UI.FragmentInputsDisplay;
+import com.namreh.capcaculator.logic.Logic;
+import com.namreh.capcaculator.model.Model;
+import com.namreh.capcaculator.model.StudentInformation;
+import com.namreh.capcaculator.UI.FragmentDisplayCAP;
 
 public class MainActivity extends AppCompatActivity implements FragmentInputsDisplay.getStudentInformationListener,
-            FragmentDisplayCAP.displayGPA, FragmentInputsDisplay.GetSpinnerInputsListener, FragmentInputsDisplay.GetGradeCreditInputsListener
+        FragmentDisplayCAP.displayGPA, FragmentInputsDisplay.GetSpinnerInputsListener, FragmentInputsDisplay.GetGradeCreditInputsListener
             ,FragmentInputsDisplay.UpdateForecastCAP {
     protected Logic logicManager;
     protected Model modelManger;

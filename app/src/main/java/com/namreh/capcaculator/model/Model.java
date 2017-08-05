@@ -1,4 +1,4 @@
-package com.example.herman.capcaculator.model;
+package com.namreh.capcaculator.model;
 
 /**
  * Created by Herman on 29/7/2017.

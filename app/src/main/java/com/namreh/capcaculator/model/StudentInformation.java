@@ -1,4 +1,4 @@
-package com.example.herman.capcaculator.model;
+package com.namreh.capcaculator.model;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

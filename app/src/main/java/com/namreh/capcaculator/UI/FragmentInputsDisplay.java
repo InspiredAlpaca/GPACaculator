@@ -1,4 +1,4 @@
-package com.example.herman.capcaculator.UI;
+package com.namreh.capcaculator.UI;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -23,6 +23,8 @@ public class FragmentInputsDisplay extends Fragment {
     Spinner spinner1,spinner2,spinner3,spinner4,spinner5;
     String mod1,mod2,mod3,mod4,mod5; //To get data from spinners
     Button submitNewMods;
+    private TableLayout moduleTable;
+    Context context;
 
     private EditText currNumSUs;
     private EditText currNumMods;
@@ -65,9 +67,46 @@ public class FragmentInputsDisplay extends Fragment {
         creditsEarned = (EditText)view.findViewById(R.id.creditEarned);
         initializeSpinners(view);
         initializeGradeCredit(view);
-
+        moduleTable = (TableLayout) view.findViewById(R.id.moduleTable);
         currNumMods = (EditText) view.findViewById(R.id.currNumMods);
         currNumSUs = (EditText)view.findViewById(R.id.currNumSU);
+        //-------------------------------------------------------------------------------------------//
+        /*
+        for(int i = 6; i < 10; i++){
+            TableRow row= new TableRow(context);
+            TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+            row.setLayoutParams(lp);
+            TextView moduleX = new TextView(context);
+            moduleX.setTextAppearance(android.R.style.TextAppearance_Material_Body2);
+            moduleX.setTextSize(17);
+            moduleX.setText("Module " + i );
+            row.addView(moduleX);
+            
+            Spinner spinnerX = new Spinner(context);
+            ArrayAdapter adapter = ArrayAdapter.createFromResource(this.getContext() ,R.array.grades, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinnerX.setAdapter(adapter);
+            spinnerX.setMinimumHeight(10);
+            spinnerX.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    mod1 = getSpinnerSelection(parent,view,position,id);
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+            row.addView(spinnerX);
+            EditText moduleCreditX = new EditText(context);
+            moduleCreditX.setText("4");
+            moduleCreditX.setBackgroundResource(R.drawable.border);
+            moduleCreditX.setGravity(Gravity.CENTER);
+            row.addView(moduleCreditX);
+            
+            moduleTable.addView(row);
+        }
+        */
+        //-------------------------------------------------------------------------------------------//
         
         currNumMods.setFocusable(false);
         currNumMods.setAlpha(0.5f);
@@ -138,8 +177,7 @@ public class FragmentInputsDisplay extends Fragment {
                 onGradeCreditListener.onGradeCreditistener(modCredit1.getText().toString(),modCredit2.getText().toString(),modCredit3.getText().toString(),modCredit4.getText().toString(),modCredit5.getText().toString());
                 double value = updateForecastCAP.getForecastCAP();
                 if(Double.isNaN(value)){
-                    System.out.println("THIS WORKEDDDD");
-                    Toast.makeText(getActivity(), "Please input CAP & credits earned",
+                    Toast.makeText(getActivity(), "Please input CAP & credits earned/Number of modules taken",
                             Toast.LENGTH_LONG).show();
                 } else {
                     DecimalFormat df = new DecimalFormat("###0.000");
@@ -208,6 +246,7 @@ public class FragmentInputsDisplay extends Fragment {
         getSpinnerInputsListener = (GetSpinnerInputsListener) context; //This object will be used to call the method defined in main during button click
         onGradeCreditListener = (GetGradeCreditInputsListener)context;
         updateForecastCAP = (UpdateForecastCAP) context;
+        this.context = context;
     }
     
     /**
